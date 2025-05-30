@@ -60,8 +60,8 @@ all: main-build
 main-build: DCC\ Nucleo\ Board.elf secondary-outputs
 
 # Tool invocations
-DCC\ Nucleo\ Board.elf DCC\ Nucleo\ Board.map: $(OBJS) $(USER_OBJS) C:\Users\Sebastian\ Vidal\Desktop\LabThermics-Local\DCC\ Nucleo\ Board\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "DCC Nucleo Board.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Sebastian Vidal\Desktop\LabThermics-Local\DCC Nucleo Board\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DCC Nucleo Board.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+DCC\ Nucleo\ Board.elf DCC\ Nucleo\ Board.map: $(OBJS) $(USER_OBJS) C:\Users\Sebastian\ Vidal\Desktop\LabThermics-Local\PWM-GEN-DCC\DCC\ Nucleo\ Board\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "DCC Nucleo Board.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\Sebastian Vidal\Desktop\LabThermics-Local\PWM-GEN-DCC\DCC Nucleo Board\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="DCC Nucleo Board.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

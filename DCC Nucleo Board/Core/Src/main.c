@@ -167,7 +167,7 @@ int main(void)
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_2);
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
 
-  HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_5);
+  //HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_5);
 
   // Initial set of HIFREQ signal
   AD9833_Init(SQR, 1000.0, 0.0);
@@ -188,7 +188,7 @@ int main(void)
 	    final_freq = atof((char (*)) final_data); // guarda dato de string a float.
 	    AD9833_Init(SQR, final_freq, 0.0);
 	    sprintf(buffer, "Freq: %.f Hz\r\n", final_freq);
-	    HAL_UART_Transmit(&huart6, (uint8_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
+	    HAL_UART_Transmit(&huart2, (uint8_t*)buffer, strlen(buffer), HAL_MAX_DELAY);
 	   }
   }
   /* USER CODE END 3 */
